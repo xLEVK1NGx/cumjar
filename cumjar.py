@@ -4,8 +4,10 @@ from discord.ext import commands
 import aiohttp
 import io
 import math
-import os
 from PIL import Image, ImageDraw
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 # ---- CONFIG ----
 BOT_TOKEN = os.getenv(BOT_TOKEN)
@@ -155,5 +157,6 @@ async def on_ready():
     synced = await tree.sync()
     print(f"Synced {len(synced)} commands")
     print(f"Logged in as {bot.user}")
+
 
 bot.run(BOT_TOKEN)
