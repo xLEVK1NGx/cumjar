@@ -10,7 +10,7 @@ import os
 load_dotenv()
 
 # ---- CONFIG ----
-BOT_TOKEN = os.getenv(BOT_TOKEN)
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 FRAME_COUNT = 80
 FILL_FRAMES = 40
 FRAME_DURATION = 50  # ms per frame
@@ -160,3 +160,4 @@ async def on_ready():
 
 
 bot.run(BOT_TOKEN)
+
